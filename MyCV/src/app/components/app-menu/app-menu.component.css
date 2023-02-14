@@ -40,29 +40,3 @@
 .menu-btn svg {
   fill: var(--first-color);
 }
-
-@media screen and (min-width: 1024px) {
-  .menu-btn {
-    display: none;
-  }
-
-  .menu {
-    position: static;
-    width: auto;
-    flex-direction: row;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .menu a {
-    padding: 0 1rem;
-  }
-
-  .menu a:last-child {
-    padding-right: 0;
-  }
-
-  .menu a:hover {
-    background-color: transparent;
-  }
-}

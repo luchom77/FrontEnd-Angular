@@ -22,7 +22,7 @@
   --header-height: 4rem;
 }
 
-/* ***** Reset ***** */
+/* ***** Reset ***** */ /* es decir, elimina los estilos predeterminados*/
 html {
   box-sizing: border-box;
   font-family: var(--font);
@@ -34,7 +34,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-}
+} /*establece el modelo de caja de todos los elementos del HTML y sus pseudo-elementos de acuerdo al modelo establecido en su elemento padre*/
 
 body {
   margin: 0;
@@ -147,70 +147,18 @@ p {
   text-decoration: none;
 }
 
-.portfolio-card {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
+.section {
+  padding: 2rem 1rem;
 }
 
-.portfolio-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.portfolio-card-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  background-color: var(--first-alpha-color);
-  color: var(--white-color);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease-in-out;
-}
-
-.portfolio-card:hover .portfolio-card-info {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.portfolio-card-info > div {
-  padding: 1rem;
-  border: thin solid var(--white-color); /*borde de linea solida y fina*/
-  width: 100%;
-  height: 100%;
-}
-
-.portfolio-modal {
-  padding: 1rem;
-  max-width: 400px;
-  /* display y flex direction para acomodar en columnas el contenido*/
-  display: flex;
-  flex-direction: column;
-  background-color: var(--white-color);
-}
-
-.portfolio-modal h3 {
-  border-bottom: medium solid var(--first-color);
-  margin: 1rem auto;
-  padding: 0.5rem 0;
+.section-title {
+  border-top: thin solid var(--first-color);
+  border-bottom: thin solid var(--first-color);
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  width: 300px;
+  text-align: center;
   color: var(--title-color);
-}
-
-.portfolio-details {
-  /*para separar el contenido en dos columnas de distintos anchos*/
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-auto-rows: 2rem;
-}
-
-.portfolio-details b {
-  color: var(--first-color);
 }
 
 .service-card {
@@ -324,4 +272,30 @@ p {
 
 .social-media {
   background-color: #000;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu a {
+    padding: 0 1rem;
+  }
+
+  .menu a:last-child {
+    padding-right: 0;
+  }
+
+  .menu a:hover {
+    background-color: transparent;
+  }
 }
