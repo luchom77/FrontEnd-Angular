@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { AppHomeComponent } from './components/app-home/app-home.component';
 import { AppMenuComponent } from './components/app-menu/app-menu.component';
 import { AppAboutMeComponent } from './components/app-about-me/app-about-me.component';
-import { ServicesComponent } from './components/services/services.component';
+import { AppServicesComponent } from './components/app-services/app-services.component';
 import { AppPortafolioComponent } from './components/app-portafolio/app-portafolio.component';
+import { AppTestimonialsComponent } from './components/app-testimonials/app-testimonials.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,13 @@ import { AppPortafolioComponent } from './components/app-portafolio/app-portafol
     AppHomeComponent,
     AppMenuComponent,
     AppAboutMeComponent,
-    ServicesComponent,
-    AppPortafolioComponent
+    AppServicesComponent,
+    AppPortafolioComponent,
+    AppTestimonialsComponent,
+    ContactComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
