@@ -23,7 +23,7 @@
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  color: var(--first-color);
+  color: var(--white-color);
 }
 
 .menu a:hover {
@@ -39,4 +39,43 @@
 
 .menu-btn svg {
   fill: var(--first-color);
+}
+
+/*Otros*/
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+
+.none {
+  display: none;
+}
+
+/*Media query del componente menu*/
+@media screen and (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu a {
+    padding: 0 1rem;
+  }
+
+  .menu a:last-child {
+    padding-right: 0;
+  }
+
+  .menu a:hover {
+    background-color: transparent;
+  }
 }
