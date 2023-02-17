@@ -41,7 +41,7 @@
   fill: var(--first-color);
 }
 
-/*Otros*/
+/*Otros (estan en utilities del styles.css)*/
 
 .container {
   margin-left: auto;
