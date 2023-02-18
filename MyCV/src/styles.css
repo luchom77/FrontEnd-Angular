@@ -289,18 +289,6 @@ p {
   box-shadow: 0.25rem 0.25rem 0.1rem rgba(0, 0, 0, 0.25);
 }
 
-.btn {
-  border-radius: 0.5rem;
-  padding: 1rem;
-  display: inline-block;
-  width: 200px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  color: var(--white-color);
-  background-color: var(--first-color);
-}
-
 .container {
   margin-left: auto;
   margin-right: auto;

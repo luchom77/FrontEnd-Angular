@@ -12,6 +12,8 @@ import { AppTestimonialsComponent } from './components/app-testimonials/app-test
 import { AppContactComponent } from './components/app-contact/app-contact.component';
 import { AppFooterComponent } from './components/app-footer/app-footer.component';
 import { AppFormComponent } from './components/app-form/app-form.component';
+import { ButtonComponent } from './components/button/button.component';
+import { ContactCardComponent } from './components/contact-card/contact-card.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { AppFormComponent } from './components/app-form/app-form.component';
     AppContactComponent,
     AppFooterComponent,
     AppFormComponent,
+    ButtonComponent,
+    ContactCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
