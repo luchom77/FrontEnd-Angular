@@ -9,7 +9,9 @@ import { AppAboutMeComponent } from './components/app-about-me/app-about-me.comp
 import { AppServicesComponent } from './components/app-services/app-services.component';
 import { AppPortafolioComponent } from './components/app-portafolio/app-portafolio.component';
 import { AppTestimonialsComponent } from './components/app-testimonials/app-testimonials.component';
-import { ContactComponent } from './components/contact/contact.component';
+import { AppContactComponent } from './components/app-contact/app-contact.component';
+import { AppFooterComponent } from './components/app-footer/app-footer.component';
+import { AppFormComponent } from './components/app-form/app-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ContactComponent } from './components/contact/contact.component';
     AppServicesComponent,
     AppPortafolioComponent,
     AppTestimonialsComponent,
-    ContactComponent,
+    AppContactComponent,
+    AppFooterComponent,
+    AppFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
