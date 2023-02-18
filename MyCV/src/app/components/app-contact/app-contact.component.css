@@ -85,6 +85,46 @@
   }
 }
 
+/* **** Modal **** */
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-alpha-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal-close svg {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--first-color);
+}
+
+/* .modal[id|="trabajo"]:target   clase modal, id que empiece con la palabra trabajo, target es que me encuentro en esa seccion*/
+
+.modal[id|="trabajo"]:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* ***** Site Styles ****** */
 
 .about > article {
@@ -112,6 +152,16 @@
   margin-top: -1rem;
 }
 
+.sc-media > a {
+  padding: 0 0.4rem;
+  text-decoration: none;
+}
+
+.sc-media svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 @media screen and (min-width: 1024px) {
   .full-lg-screen {
     width: 100%;
@@ -134,4 +184,24 @@
 
 .none {
   display: none;
+}
+
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 0.1rem rgba(0, 0, 0, 0.25);
+}
+
+.btn {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--first-color);
+}
+
+.text-center {
+  text-align: center;
 }
