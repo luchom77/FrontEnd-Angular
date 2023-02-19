@@ -14,6 +14,7 @@ import { AppFooterComponent } from './components/app-footer/app-footer.component
 import { AppFormComponent } from './components/app-form/app-form.component';
 import { ButtonComponent } from './components/button/button.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -30,8 +31,10 @@ import { ContactCardComponent } from './components/contact-card/contact-card.com
     ButtonComponent,
     ContactCardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
+  exports:[ButtonComponent, ContactCardComponent] /*Por defecto los componentes definidos dentro de un módulo sólo son accesibles por éste. Si deseamos dejar visibles componentes, para que luego sean utilizados desde otros componentes, simplemente deberemos invocarlos en el array exports del módulo*/ 
+  
 })
 export class AppModule {}
