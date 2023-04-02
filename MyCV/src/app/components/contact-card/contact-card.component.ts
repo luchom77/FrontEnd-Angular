@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AllWebSiteService } from 'src/app/services/all-web-site.service'
 
 @Component({
   selector: 'app-contact-card',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact-card.component.css']
 })
 export class ContactCardComponent {
-
+ miPortfolio:any;
+  
+  constructor(private datosPortfolio:AllWebSiteService){}
+  
+  ngOnInit(): void {
+    
+    this.datosPortfolio.obtenerDatos().subscribe(data => {console.log(data)
+    this.miPortfolio=data;
+  })}
 }

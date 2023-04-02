@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { AllWebSiteService } from 'src/app/services/all-web-site.service'
 
 
 @Component({
@@ -7,14 +8,13 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./app-about-me.component.css']
 })
 export class AppAboutMeComponent implements OnInit {
-
-  constructor(){}
+  miPortfolio:any;
   
-  nombre = "Luciano Moore"
-  profession = 'Designer and Web Developer'
-
+  constructor(private datosPortfolio:AllWebSiteService){}
+  
   ngOnInit(): void {
     
-    
-  }
+    this.datosPortfolio.obtenerDatos().subscribe(data => {console.log(data)
+    this.miPortfolio=data[0];
+  })}
 }

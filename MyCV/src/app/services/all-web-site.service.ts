@@ -6,12 +6,10 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root',
 })
 export class AllWebSiteService {
+  url:string="http://localhost4200/"
+  constructor(private http:HttpClient) {}
 
-  constructor(){}
-
-  /*constructor(private http:HttpClient()) {}
-
-  obtenerDatos():Observable<any> {  
-      return this.http.get("./assets/data/data.json");
-  }*/
+  obtenerDatos(): Observable<any> {  
+      return this.http.get<any>(this.url+"persona");
+  }
 }

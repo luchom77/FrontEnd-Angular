@@ -14,7 +14,11 @@ import { AppFooterComponent } from './components/app-footer/app-footer.component
 import { AppFormComponent } from './components/app-form/app-form.component';
 import { ButtonComponent } from './components/button/button.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule, HTTP_INTERCEPTORS} from "@angular/common/http";
+import { AppLogInComponent } from './components/app-log-in/app-log-in.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InterceptorService } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +34,11 @@ import {HttpClientModule} from "@angular/common/http";
     AppFormComponent,
     ButtonComponent,
     ContactCardComponent,
+    AppLogInComponent,
+    PortfolioComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent],
   exports:[ButtonComponent, ContactCardComponent] /*Por defecto los componentes definidos dentro de un módulo sólo son accesibles por éste. Si deseamos dejar visibles componentes, para que luego sean utilizados desde otros componentes, simplemente deberemos invocarlos en el array exports del módulo*/ 
   
