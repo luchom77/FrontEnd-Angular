@@ -1,5 +1,5 @@
-/* **** Menu ****** */
-.menu {
+/* **** Carta ****** */
+.carta {
   position: fixed;
   left: 0;
   right: 0;
@@ -13,11 +13,12 @@
   background-color: var(--second-color);
 }
 
-.menu.is-active {
+.carta.is-active {
   opacity: 1;
   pointer-events: auto;
+ 
 }
-.menu a {
+.carta a {
   padding: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
@@ -26,40 +27,41 @@
   color: var(--white-color);
 }
 
-.menu a:hover {
+.carta a:hover {
   color: var(--white-color);
   background-color: var(--first-color);
 }
-.menu-btn {
+.carta-boton {
   outline: thin solid var(--first-color);
   border: 0;
   cursor: pointer;
   background-color: var(--second-color);
 }
 
-.menu-btn svg {
+.carta-boton svg {
   fill: var(--first-color);
 }
 
 /*Otros (estan en utilities del styles.css)*/
 
-.container {
+.conteiner {
   margin-left: auto;
   margin-right: auto;
   max-width: var(--max-width);
+  margin-top: auto;
 }
 
 .none {
   display: none;
 }
 
-/*Media query del componente menu*/
+/*Media query del componente carta*/
 @media screen and (min-width: 1024px) {
-  .menu-btn {
+  .carta-boton {
     display: none;
   }
 
-  .menu {
+  .carta {
     position: static;
     width: auto;
     flex-direction: row;
@@ -67,15 +69,28 @@
     pointer-events: auto;
   }
 
-  .menu a {
+  .carta a {
     padding: 0 1rem;
   }
 
-  .menu a:last-child {
+  .carta a:last-child {
     padding-right: 0;
   }
 
-  .menu a:hover {
+  .carta a:hover {
     background-color: transparent;
   }
+
+  .header {
+  position: fixed;
+  left: 0;
+  top: auto;
+  z-index: 999;
+  padding: 1rem;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--second-color);
 }
+
+}
+

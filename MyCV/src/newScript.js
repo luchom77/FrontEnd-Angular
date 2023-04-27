@@ -1,14 +1,14 @@
-/* ***** Menu ***** */
+/* ***** menu ***** */
 
 /* para que se abra el menú al clickear en la hamburguesa*/
 
 ((d) => {
-  const $btnMenu = d.querySelector(".menu-btn"),
+  const $botonmenu = d.querySelector(".menu-boton"),
     $menu = d.querySelector(".menu");
 
-  $btnMenu.addEventListener("click", (e) => {
-    $btnMenu.firstElementChild.classList.toggle("none");
-    $btnMenu.lastElementChild.classList.toggle("none");
+  $botonmenu.addEventListener("click", (e) => {
+    $botonmenu.firstElementChild.classList.toggle("none");
+    $botonmenu.lastElementChild.classList.toggle("none");
     $menu.classList.toggle("is-active");
   });
 
@@ -16,8 +16,8 @@
   d.addEventListener("click", (e) => {
     if (!e.target.matches(".menu a")) return false;
 
-    $btnMenu.firstElementChild.classList.remove("none");
-    $btnMenu.lastElementChild.classList.add("none");
+    $botonmenu.firstElementChild.classList.remove("none");
+    $botonmenu.lastElementChild.classList.add("none");
     $menu.classList.remove("is-active");
   });
 })(document);

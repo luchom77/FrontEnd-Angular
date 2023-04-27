@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { MyPortfolioComponent } from './components/my-portfolio/my-portfolio.component';
+import { AppHomeComponent } from './components/app-home/app-home.component';
 import { AppLogInComponent } from './components/app-log-in/app-log-in.component';
 
-const routes: Routes = [
-  {path:"portfolio", component:PortfolioComponent},
-  {path:"log-in", component:AppLogInComponent},
-  {path:"",redirectTo:"log-in", pathMatch:"full"}
+
+const routes:Routes = [
+  {path:"my-portfolio", component:MyPortfolioComponent},
+  {
+    path:"",component:MyPortfolioComponent
+  },
+  {
+    path:"logIn", component: AppLogInComponent
+  }
 ];
 
 @NgModule({

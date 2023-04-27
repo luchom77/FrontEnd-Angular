@@ -26,7 +26,7 @@
 
 /* ***** Utilities ***** */
 
-.btn {
+.boton {
   border-radius: 0.5rem;
   padding: 1rem;
   display: inline-block;
@@ -37,3 +37,36 @@
   color: var(--white-color);
   background-color: var(--first-color);
 }
+
+/* *** Boton Log In *** */
+
+.boton-ln {
+  border-radius: 1rem;
+  padding: 0;
+  display: inline-block;
+  width: 80px;
+  height: 38px;
+  font-weight: bold;
+  font-family: var(--font);
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--second-color);
+  border-color:transparent ; 
+  cursor: pointer;
+}
+
+.boton-ln:hover{
+  transition: 0.5s ease;
+  opacity: 0.9 ;
+}
+
+.boton-ln:active{
+  border-color: var(--white-color);
+}
+
+.log-in{
+  position: absolute;
+  padding: 0.7rem;
+}
+
