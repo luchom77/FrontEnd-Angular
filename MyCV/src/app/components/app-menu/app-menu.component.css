@@ -11,6 +11,7 @@
   pointer-events: none;
   transition: opacity 0.5s ease;
   background-color: var(--second-color);
+  
 }
 
 .carta.is-active {
@@ -48,11 +49,30 @@
   margin-left: auto;
   margin-right: auto;
   max-width: var(--max-width);
-  margin-top: auto;
+  
 }
 
 .none {
   display: none;
+}
+
+.cabecera {
+  position: fixed;
+  
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: auto;
+  background-color: var(--second-color);
+}
+
+.cabecera > .conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
 /*Media query del componente carta*/
@@ -82,21 +102,13 @@
   }
 
   .cabecera {
-  position: fixed;
-  left: 0;
-  top: auto;
-  z-index: 999;
-  padding: 1rem;
-  width: 100%;
-  height: var(--cabecera-height);
-  background-color: var(--second-color);
+  
+    bottom: 0;
+    padding: 0.5rem;
+    height: calc(var(--header-height)-0.5rem);
 }
 
-.cabecera > .conteiner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 }
 

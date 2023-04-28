@@ -19,7 +19,7 @@
   --black-alpha-color: rgba(0, 0, 0, 0.5);
   --font: "Raleway", sans-serif;
   --max-width: 1200px;
-  --header-height: 4rem;
+  --cabecera-height: 4rem;
 }
 
 /* ***** Reset ***** */ /* es decir, elimina los estilos predeterminados*/
@@ -118,28 +118,15 @@ p {
 }
 
 .footer {
-  margin-bottom: var(--header-height);
+  margin-bottom: var(--cabecera-height);
   padding: 0.5rem;
   text-align: center;
   color: var(--white-color);
   background-color: var(--black-color);
 }
 
-.cabecera {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 999;
-  padding: 1rem;
-  width: 100%;
-  height: var(--header-height);
-  background-color: var(--second-color);
-}
-.cabecera > .conteiner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
+
 
 .logo a {
   color: var(--white-color);
@@ -246,12 +233,7 @@ p {
     grid-template-columns: repeat(4, 24%);
   }
 
-  .cabecera {
-    position: sticky;
-    top: 0;
-    padding: 0.5rem;
-    height: calc(var(--header-height)-0.5rem);
-  }
+  
 
   .portfolio > .conteiner {
     display: grid;
