@@ -13,7 +13,8 @@ export class ContactCardComponent {
   
   ngOnInit(): void {
     
-    this.datosPortfolio.obtenerDatos().subscribe(data => {console.log(data)
+   /* this.datosPortfolio.obtenerDatos(1).subscribe(data => {console.log(data)
     this.miPortfolio=data;
-  })}
+  })
+*/}
 }

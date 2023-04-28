@@ -125,7 +125,7 @@ p {
   background-color: var(--black-color);
 }
 
-.header {
+.cabecera {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -135,7 +135,7 @@ p {
   height: var(--header-height);
   background-color: var(--second-color);
 }
-.header > .conteiner {
+.cabecera > .conteiner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -246,7 +246,7 @@ p {
     grid-template-columns: repeat(4, 24%);
   }
 
-  .header {
+  .cabecera {
     position: sticky;
     top: 0;
     padding: 0.5rem;

@@ -30,7 +30,7 @@
   padding: 0.7rem;
 }
 
-/* **** Modal **** */
+/* **** ventana **** */
 .ventana {
   position: fixed;
   z-index: 999;
@@ -48,12 +48,12 @@
 }
 
 .contenido-login {
-  position: fixed;
+  position: absolute;
   display: flex;
   width: 400px;
-  height: 400px;
+  height: auto;
   background-color: white;
-  
+  padding: 1rem;
 }
 
 .cerrar-login {
@@ -97,10 +97,10 @@
 
 
 
-.login-modal {
+.login-ventana {
   padding: 1rem;
   max-height: 400px;
-  max-width: 400px;
+  
   /* display y flex direction para acomodar en columnas el contenido*/
   display: flex;
   

@@ -15,7 +15,7 @@ import { AppFormComponent } from './components/app-form/app-form.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from "@angular/common/http";
 import { ReactiveFormsModule } from '@angular/forms';
-import { InterceptorService } from './services/interceptor.service';
+
 import { AppLogInComponent } from './components/app-log-in/app-log-in.component';
 import { Routes } from '@angular/router';
 import { MyPortfolioComponent } from './components/my-portfolio/my-portfolio.component';
@@ -46,7 +46,7 @@ const routes: Routes= [
     
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
+  providers: [],
   bootstrap: [AppComponent],
   exports:[ContactCardComponent] /*Por defecto los componentes definidos dentro de un módulo sólo son accesibles por éste. Si deseamos dejar visibles componentes, para que luego sean utilizados desde otros componentes, simplemente deberemos invocarlos en el array exports del módulo*/ 
   

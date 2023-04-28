@@ -1,5 +1,5 @@
 .footer {
-  margin-bottom: var(--header-height);
+  margin-bottom: var(--cabecera-height);
   padding: 0.5rem;
   text-align: center;
   color: var(--white-color);

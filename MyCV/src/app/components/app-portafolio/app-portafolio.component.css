@@ -1,10 +1,10 @@
-.modal#gracias:target {
+.ventana#gracias:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* **** Modal **** */
-.modal {
+/* **** ventana **** */
+.ventana {
   position: fixed;
   z-index: 999;
   top: 0;
@@ -20,25 +20,25 @@
   transition: all 1s;
 }
 
-.modal-content {
+.ventana-content {
   position: relative;
 }
 
-.modal-close {
+.ventana-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
 }
 
-.modal-close svg {
+.ventana-close svg {
   width: 3rem;
   height: 3rem;
   fill: var(--first-color);
 }
 
-/* .modal[id|="trabajo"]:target   clase modal, id que empiece con la palabra trabajo, target es que me encuentro en esa seccion*/
+/* .ventana[id|="trabajo"]:target   clase ventana, id que empiece con la palabra trabajo, target es que me encuentro en esa seccion*/
 
-.modal[id|="trabajo"]:target {
+.ventana[id|="trabajo"]:target {
   opacity: 1;
   pointer-events: auto;
 }
@@ -84,7 +84,7 @@
   height: 100%;
 }
 
-.portfolio-modal {
+.portfolio-ventana {
   padding: 1rem;
   max-width: 400px;
   /* display y flex direction para acomodar en columnas el contenido*/
@@ -93,7 +93,7 @@
   background-color: var(--white-color);
 }
 
-.portfolio-modal h3 {
+.portfolio-ventana h3 {
   border-bottom: medium solid var(--first-color);
   margin: 1rem auto;
   padding: 0.5rem 0;
