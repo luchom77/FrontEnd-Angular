@@ -1,3 +1,32 @@
+/* *** Boton Sign In *** */
+.boton-si {
+  border-radius: 1rem;
+  padding: 0;
+  display: inline-block;
+  width: 80px;
+  height: 38px;
+  font-weight: bold;
+  font-family: var(--font);
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--second-color);
+  border-color:transparent ; 
+  cursor: pointer;
+}
+
+.boton-si:hover{
+  transition: 0.4s ease;
+  opacity: 0.9 ;
+}
+
+
+.boton-si:active{
+  border-color: var(--black-color);
+  background-color: var(--white-color);
+  color: black;
+}
+
 /* *** Boton Log In *** */
 
 .boton-ln {

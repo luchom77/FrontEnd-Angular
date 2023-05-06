@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { IPersona } from 'src/app/modelos/persona.model';
 import { AllWebSiteService } from 'src/app/services/all-web-site.service'
-import { OrigenService } from 'src/app/services/origen.service';
+
 
 
 @Component({
@@ -15,15 +15,15 @@ export class AppAboutMeComponent implements OnInit {
   miPortfolio!:IPersona ;
  
   
-  constructor(private portfolioService:AllWebSiteService, private origenService: OrigenService){}
+  constructor(private portfolioService:AllWebSiteService){}
 
   
   
   ngOnInit(): void {
     
-     this.portfolioService.obtenerDatos(1).subscribe({
+     this.portfolioService.obtenerDatos(52).subscribe({
       next:(infoBack:IPersona) => this.miPortfolio=infoBack,
-      error:(error:Error)=>console.error(error)
+      error:(error:Error)=>console.log("holaa")
      })
     
 }}

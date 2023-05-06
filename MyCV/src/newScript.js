@@ -3,8 +3,8 @@
 /* para que se abra el menú al clickear en la hamburguesa*/
 
 ((d) => {
-  const $botonmenu = d.querySelector(".menu-boton"),
-    $menu = d.querySelector(".menu");
+  const $botonmenu = d.querySelector(".carta-boton"),
+    $menu = d.querySelector(".carta");
 
   $botonmenu.addEventListener("click", (e) => {
     $botonmenu.firstElementChild.classList.toggle("none");
@@ -14,7 +14,7 @@
 
   /* para cerrar el menú al clickear */
   d.addEventListener("click", (e) => {
-    if (!e.target.matches(".menu a")) return false;
+    if (!e.target.matches(".carta a")) return false;
 
     $botonmenu.firstElementChild.classList.remove("none");
     $botonmenu.lastElementChild.classList.add("none");

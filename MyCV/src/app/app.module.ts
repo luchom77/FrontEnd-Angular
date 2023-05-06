@@ -22,10 +22,7 @@ import { MyPortfolioComponent } from './components/my-portfolio/my-portfolio.com
 
 
 const routes: Routes= [
-  {
-    path:'home',
-    component: AppHomeComponent
-  }
+ 
 ];
 
 @NgModule({
